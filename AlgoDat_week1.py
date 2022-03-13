@@ -1,25 +1,27 @@
 
 def name_age(x=input("What is your name?"), y=input("How old are you?")):
-    print(f"Hello {x}. Your age is {y}.")                                           # weiß nicht, ob richtig so
+    print(f"Hello {x}. Your age is {y}.")
     return x + y
 
 
 def swap_integers(num1, num2):
-    x = str(num1)
-    y = str(num2)
-    print(y, x)
-    return y + x
+    x = num1
+    y = num2
+    num1 = y
+    num2 = x
+    print(num1, num2)
+    return str(num1) + str(num2)
 
 
 def check_numbers(num1, num2):
-    return (num1 % 10 == 0 and num2 % 10 == 0) and num1 % 6 == 0 or num2 % 6 == 0   # einzeilige Lösung, lange Zeile
+    return (num1 % 10 == 0 and num2 % 10 == 0) and num1 % 6 == 0 or num2 % 6 == 0       # einzeilige Lösung 8)
 
 
 def sum_up(num1, num2):
     result = 0
-    if num2 < num1 or (num1 < 0 or num2 < 0):
+    if num2 < num1 or num1 < 0 or num2 < 0:
         return 0
-    for num in range(num1, num2+1):
+    for num in range(num1, num2 + 1):
         result += num
     return result
 
@@ -41,3 +43,5 @@ def triangle(rows):
         for y in range(1, x + 1):
             print('* ', end='')
         print(' ')
+
+
